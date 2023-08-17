@@ -1,0 +1,41 @@
+.text-left {
+  text-align: left!important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  font-family: 'Roboto';
+}
+
+form {
+  align: center;
+}
+
+section#contact {
+  background-color: WHITE;
+  background-repeat: no-repeat;
+}
+
+.table-responsive
+{
+
+}
+
+.table td, .table th {
+  font-family: 'Roboto', sans-serif;
+}
+
+.thedropdown {
+  text-align: center;
+}
+
+
+button, input, optgroup, select, textarea {
+margin: 0;
+}
+
+
+
+  .btn-secondary {
+    border-color: #775376;
+  }

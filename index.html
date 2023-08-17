@@ -1,0 +1,1969 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>The Evolution of Manga</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Black">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Narrow">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+     google.charts.load('current', {'packages':['corechart']});
+     google.charts.setOnLoadCallback(drawChart);
+     google.charts.setOnLoadCallback(drawChart2);
+
+
+
+
+   function drawChart() {
+    byyear = document.getElementById("thedropdown").value;
+
+    info = [ {year: "2010", op59: 2593580, op57: 2578730, op58: 2557356, op60: 2492183, op56: 2480124},
+             {year: "2011", op61: 3382588, op62: 3207568, op63: 3073175, op64: 2652700, nar54: 1229170},
+             {year: "2012", op65: 3336992, op66: 3320744, op67: 3044901, op68: 2390625, nar61: 1281309},
+             {year: "2013", op69: 3147224, op70: 3039487, op71: 2890263, op72: 2354005, aot9: 1950807},
+             {year: "2014", op73: 3010801, op74: 2834558, op75: 2698071, aot13: 1921457, aot12: 1895305},
+             {year: "2015", op76: 3185018, op77: 3020137, op78: 2977466, op79: 2810583, aot15: 2000137},
+             {year: "2016", op80: 2981494, op81: 2696528, op82: 2532488, op83: 2287521, aot18: 1983248},
+             {year: "2017", op84: 2730184, op85: 2688847, op86: 2496033, op87: 2040375, aot21: 1701237},
+             {year: "2018", op88: 2476305, op89: 2167146, op90: 2074623, aot24: 1486038, aot25: 1358623},
+             {year: "2019", op91: 2388243, op93: 2200000, op92: 2112734, op94: 1880146, aot27: 1344500},
+             {year: "2020", kny18: 4393137, kny19: 4243312, kny1: 3703309, kny8: 3645580, kny7: 3636822}
+    ];
+
+
+   for(i=0; i<info.length; i++) {
+   if(byyear == info[i].year) {
+     op59= info[i].op59;
+     op57= info[i].op57;
+     op58= info[i].op58;
+     op60= info[i].op60;
+     op56= info[i].op56;
+
+     op61= info[i].op61;
+     op62= info[i].op62;
+     op63= info[i].op63;
+     op64= info[i].op64;
+     nar54= info[i].nar54;
+
+     op65= info[i].op65;
+     op66= info[i].op66;
+     op67= info[i].op67;
+     op68= info[i].op68;
+     nar61= info[i].nar61;
+
+
+
+
+     op69= info[i].op69;
+     op70= info[i].op70;
+     op71= info[i].op71;
+     op72= info[i].op72;
+     aot9= info[i].aot9;
+
+      op73 = info[i].op73;
+      op74= info[i].op74;
+      op75= info[i].op75;
+      aot13= info[i].aot13;
+      aot12= info[i].aot12;
+
+
+
+        op76 = info[i].op76;
+        op77= info[i].op77;
+        op78= info[i].op78;
+        op79= info[i].op79;
+        aot15= info[i].aot15;
+
+      op80 = info[i].op80;
+      op81= info[i].op81;
+      op82= info[i].op82;
+      op83= info[i].op83;
+     aot18= info[i].aot18;
+
+        op84 = info[i].op84;
+        op85= info[i].op85;
+        op86= info[i].op86;
+        op87= info[i].op87;
+      aot21= info[i].aot21;
+
+
+       op88 = info[i].op88;
+       op89= info[i].op89;
+       op90= info[i].op90;
+      aot24= info[i].aot24;
+      aot25= info[i].aot25;
+
+       op91 = info[i].op91;
+       op92= info[i].op92;
+       op93 = info[i].op93;
+       op94= info[i].op94;
+       aot27= info[i].aot27;
+       kny18 = info[i].kny18;
+       kny19= info[i].kny19;
+       kny1 = info[i].kny1;
+       kny8= info[i].kny8;
+       kny7= info[i].kny7;
+
+
+   }// end if
+   } // end for
+
+   var data = google.visualization.arrayToDataTable([
+         ['Element', 'Volumes'],
+
+         ['ONE PIECE: vol. 59', op59],
+         ['ONE PIECE: vol. 57', op57],
+         ['ONE PIECE: vol. 58', op58],
+         ['ONE PIECE: vol. 60', op60],
+         ['ONE PIECE: vol. 56', op56],
+
+         ['ONE PIECE: vol. 61', op61],
+         ['ONE PIECE: vol. 62', op62],
+         ['ONE PIECE: vol. 63', op63],
+         ['ONE PIECE: vol. 64', op64],
+         ['Naruto: vol. 54', nar54],
+
+         ['ONE PIECE: vol. 65', op65],
+         ['ONE PIECE: vol. 66', op66],
+         ['ONE PIECE: vol. 67', op67],
+         ['ONE PIECE: vol. 68', op68],
+         ['Naruto: vol. 61', nar61],
+
+         ['ONE PIECE: vol. 69', op69],
+         ['ONE PIECE: vol. 70', op70],
+         ['ONE PIECE: vol. 71', op71],
+         ['ONE PIECE: vol. 72', op72],
+         ['Attack on Titan: vol. 9', aot9],
+
+         ['ONE PIECE: vol. 73', op73],
+         ['ONE PIECE: vol. 74', op74],
+         ['ONE PIECE: vol. 75', op75],
+         ['Attack on Titan: vol. 13', aot13],
+         ['Attack on Titan: vol. 12', aot12],
+
+         ['ONE PIECE: vol. 76', op76],
+         ['ONE PIECE: vol. 77', op77],
+         ['ONE PIECE: vol. 78', op78],
+         ['ONE PIECE: vol. 79', op79],
+         ['Attack on Titan: vol. 15', aot15],
+
+
+         ['ONE PIECE: vol. 80', op80],
+         ['ONE PIECE: vol. 81', op81],
+         ['ONE PIECE: vol. 82', op82],
+         ['ONE PIECE: vol. 83', op83],
+         ['Attack on Titan: vol. 18', aot18],
+
+
+
+         ['ONE PIECE: vol. 84', op84],
+         ['ONE PIECE: vol. 85', op85],
+         ['ONE PIECE: vol. 86', op86],
+         ['ONE PIECE: vol. 87', op87],
+         ['Attack on Titan: vol. 21', aot21],
+
+
+         ['ONE PIECE: vol. 88', op88],
+         ['ONE PIECE: vol. 89', op89],
+         ['ONE PIECE: vol. 90', op90],
+         ['Attack on Titan: vol. 24', aot24],
+         ['Attack on Titan: vol. 25', aot25],
+         ['Demon Slayer: Kimetsu no Yaiba vol. 18',   kny18],
+         ['Demon Slayer: Kimetsu no Yaiba vol. 19',   kny19],
+         ['Demon Slayer: Kimetsu no Yaiba vol. 1',  kny1],
+         ['Demon Slayer: Kimetsu no Yaiba vol. 8',   kny8],
+         ['Demon Slayer: Kimetsu no Yaiba vol. 7', kny7],
+         ['ONE PIECE: vol. 91', op91],
+         ['ONE PIECE: vol. 92', op92],
+         ['ONE PIECE: vol. 93', op93],
+         ['ONE PIECE: vol. 94', op94],
+         ['Attack on Titan: vol. 27', aot27],
+
+       ]);
+       var options = {
+         title: 'Best Selling Manga in Japan by Volume 2010-2020',
+         legend: { position: 'right', textStyle:  {fontSize: 18} },
+         colors: ['#F00699','#454E9E', '#BF1A2F', '#018E42','#F7D002']
+       };
+       var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+       chart.draw(data, options);
+     }
+
+
+
+
+       function drawChart2() {
+
+     selection = document.getElementById("thedropdown2").value;
+
+
+     info = [ {year: "2019",  h1: 12057628, h2: 10134232, h3: 7661361, h4: 7454745, h5: 5895000},
+ {year: "2020",  h6: 82345447, h7: 8251058, h8: 7709667, h9: 7212099, h10: 6702736}, ];
+
+
+ for(i=0; i<info.length; i++) {
+
+    if(selection == info[i].year){
+      s1 = info[i].h1;
+      s2 = info[i].h2;
+      s3 = info[i].h3;
+      s4 = info[i].h4;
+      s5 = info[i].h5;
+      s6 = info[i].h6;
+      s7 = info[i].h7;
+      s8 = info[i].h8;
+      s9 = info[i].h9;
+      s10 = info[i].h10;
+
+
+    }
+            //create the if statement to read the json and have it put the appropriate cities data in the chart based on the dropdown
+
+
+
+} // end for
+
+    var data = google.visualization.arrayToDataTable([
+      ['Element', 'Number of Manga Sold'],
+      ['Demon Slayer: Kimetsu no Yaiba', s1],
+      ['ONE PIECE', s2],
+      ['Kingdom', s3],
+      ['The Promised Neverland', s4],
+      ['The Quintessential Quintuplets', s5],
+      ['Demon Slayer: Kimetsu no Yaiba', s6],
+      ['Kingdom', s7],
+      ['One Piece', s8],
+      ['Haikyu!', s9],
+      ['Jujutsu Kaisen', s10],
+    ]);
+
+    var options = {
+      title: 'Best Selling Manga in Japan by Series 2019-2020',
+      legend: { position: 'top' }
+
+
+    };
+
+          var chart = new google.visualization.ColumnChart(document.getElementById('line_chart'));
+
+    //find the appropriate visualization code to draw a line chart and place it in the div below called line_chart
+
+    chart.draw(data, options);
+  }
+
+
+//script for table filter
+
+//script for table filter
+
+ String.prototype.replaceAll = function(search, replacement) {
+   var target = this;
+   return target.replace(new RegExp(search, 'g'), replacement);
+};
+
+$(document).ready(function() {
+   var ddlFilterTableRow = $('select.ddlFilterTableRow'),
+       headerCount = $('#headerCount');
+         headerCount.html($('#tableProjects').find('.Row').length + ' copies');
+
+   ddlFilterTableRow.on('change', function() {
+       ddlFilterTableRow.attr('disabled', 'disabled');
+
+       var records = $('#tableProjects').find('.Row');
+       records.hide();
+
+       var critriaAttributes = [];
+       ddlFilterTableRow.each(function() {
+           var $this = $(this),
+               $selectedLength = $this.find(':selected').length,
+               $critriaAttribute = '';
+
+           if ($selectedLength > 0 && $this.val() != '0') {
+               if ($selectedLength == 1) {
+                   $critriaAttribute += '[data-' + $this.data('attribute') + '*="' + $this.val() + '"]';
+               } else {
+                   var $startDataAttribute = '[data-' + $this.data('attribute') + '*="',
+                       $endDataAttribute = '"]',
+                       $selectedValues = $this.val().toString();
+
+                   $critriaAttribute += $startDataAttribute + $selectedValues.replaceAll(',', ($endDataAttribute + ',' + $startDataAttribute)) + $endDataAttribute;
+               }
+               critriaAttributes.push($critriaAttribute);
+           }
+       });
+
+       var $showRecords = records;
+       if (critriaAttributes.length > 0) {
+           $.each(critriaAttributes, function(i, filterValue) {
+               $showRecords = $showRecords.filter(filterValue);
+           });
+       }
+       $showRecords.show();
+
+       headerCount.html($showRecords.length + ' Projects');
+
+       ddlFilterTableRow.removeAttr('disabled');
+   });
+});
+</script>
+
+
+   <style>
+
+   #piechart {
+   height: 500px;
+   }
+
+
+
+</style>
+
+  </head>
+
+
+<body id="page-top">
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top" data-aos="fade-up" id="mainNav" style="margin-top: 0px;">
+        <div class="container"><a class="navbar-brand" href="#page-top" style="color: #ffffff;font-family: Roboto, sans-serif;">The Evolution of Manga&nbsp;</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="background: #3a9480;"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto text-uppercase">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services" style="font-family: Roboto, sans-serif;">What is Manga?</a></li>
+                    <li class="nav-item" style="font-family: Roboto, sans-serif;"><a class="nav-link js-scroll-trigger" href="#portfolio" style="font-family: Roboto, sans-serif;">The Big 3</a></li>
+                    <li class="nav-item" style="font-family: Roboto, sans-serif;"><a class="nav-link js-scroll-trigger" href="#about" style="font-family: Roboto, sans-serif;">The Heavy-Hitters</a></li>
+                    <li class="nav-item" style="font-family: Roboto, sans-serif;"><a class="nav-link js-scroll-trigger" href="#team" style="font-family: Roboto, sans-serif;">The Past 10 Years</a></li>
+                    <li class="nav-item" style="font-family: Roboto, sans-serif;"><a class="nav-link js-scroll-trigger" href="#contact" style="font-family: Roboto, sans-serif;">Rankings</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="masthead" style="background-image: url('assets/img/tanjiro1.png');">
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in"><span style="font-family: Roboto, sans-serif;">a look at the best-selling series of the past ten years&nbsp;</span></div>
+                <div class="intro-heading text-uppercase"></div><a class="btn btn-secondary btn-xl text-uppercase js-scroll-trigger" role="button" href="#services" style="background: #775376;">Learn more</a>
+            </div>
+        </div>
+    </header>
+    <section id="services" style="padding: 45px 0px;">
+      <div class="container">
+          <h1 class="section-heading" style="color: #775376;text-align: left;font-family: Archivo, sans-serif;margin-bottom: 24px;">So what exactly <em>is</em> manga?&nbsp;</h1>
+          <p class="text-muted" style="text-align: left;font-family: Roboto, sans-serif;margin-bottom: 10px;font-size: 14px;">Manga is an umbrella term for a wide variety of comic books and graphic novels originally produced and&nbsp;published in Japan. Unlike American comic books, which are usually printed in full color, Japanese manga is almost always black and white. Full-color prints are often only used for special releases.&nbsp;&nbsp;Japanese manga is read right-to-left rather than left-to-right, which is the norm for English language publications.<br><br>Most manga series are long-running and can span multiple volumes. This is something to keep in mind when starting a new series as it is imperative you read the volumes in the correct order. This might be easier for small series, such as Naoko Takeuchi's <em>Sailor Moon&nbsp;</em>which only has about 12 volumes, versus longer-running series such as Akira Toriyama's <em>Dragon Ball&nbsp;</em>which has 42 volumes.&nbsp;<br></p>
+      </div>
+        <div class="container" style="margin-bottom: 28px;">
+            <div class="col-lg-12 text-center">
+                <h1 class="text-uppercase text-left section-heading" style="font-family: 'Archivo Narrow', sans-serif;font-size: 60px;filter: contrast(98%);color: #775376;margin-bottom: 15px;">Genres</h1>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4 col-xl-8">
+                    <h6 class="section-heading" style="text-align: left;font-size: 16px;font-family: Roboto, sans-serif;margin-bottom: 7px;color: #3a9480;">Shonen</h6>
+                    <p class="text-muted" style="text-align: left;font-family: Roboto, sans-serif;margin-bottom: 10px;font-size: 14px;">The most popular and best-selling form of manga.&nbsp; The shonen genre targets boys and young teens between the ages of 12 and 18 and is typically characterized by high-action plots featuring male protagonists. This genre emphasizes platonic male friendships and the desire to better ones self through overcoming obstacles.&nbsp;&nbsp;<br><strong><em>Popular titles in this genre include:&nbsp;</em></strong></p>
+                    <ul style="text-align: left;font-family: Roboto, sans-serif;color: #39a288;font-size: 14px;">
+                        <li>Dragon Ball</li>
+                        <li>Hunter x Hunter&nbsp;</li>
+                        <li>ONE PIECE</li>
+                        <li>Naruto&nbsp;</li>
+                    </ul>
+                    <h6 class="section-heading" style="text-align: left;font-size: 16px;font-family: Roboto, sans-serif;margin-bottom: 7px;color: #3a9480;">Seinen</h6>
+                    <p class="text-muted" style="text-align: left;font-family: Roboto, sans-serif;margin-bottom: 10px;font-size: 14px;">Seinen manga caters specifically to men's interest and is marketed to men between the ages 18 and 45. The content matter is usually a bit more mature which is what distinguishes it from shonen.&nbsp; &nbsp;Where shonen manga tend to have straight-foward plots and characterization,
+                      manga that fall into this category tend to have more complex plots and protagonists who are morally grey.&nbsp;<br><strong><em>Popular titles in this genre include:&nbsp;</em></strong></p>
+                    <ul style="text-align: left;font-family: Roboto, sans-serif;color: #39a288;font-size: 14px;">
+                        <li>Berserk&nbsp;</li>
+                        <li>Tokyo Ghoul&nbsp;</li>
+                        <li>Vagabond</li>
+                        <li>Oyasumi Punpun</li>
+                    </ul>
+                    <h6 class="section-heading" style="text-align: left;font-size: 16px;font-family: Roboto, sans-serif;margin-bottom: 7px;color: #3a9480;">Shojo</h6>
+                    <p class="text-muted" style="text-align: left;font-family: Roboto, sans-serif;margin-bottom: 10px;font-size: 14px;">The target demographic for this genre is young teenaged females.&nbsp; Shojo literally means 'young woman' and has a variety of narrative styles.&nbsp; Although shojo once primarily focused on romantic relationships in the 1990s the genre became more concerned with self-fulfillment with protagonists who often fought to protect their communities.&nbsp; During this time the genre also began it's strong focus on emotional bonds between women.&nbsp;&nbsp;<br><strong><em>Popular titles in this genre include:&nbsp;</em></strong></p>
+                    <ul style="text-align: left;font-family: Roboto, sans-serif;color: #39a288;font-size: 14px;">
+                        <li>Sailor Moon</li>
+                        <li>Fruits Basket&nbsp;</li>
+                        <li>Orange</li>
+                        <li>Namaikizakari&nbsp;</li>
+                    </ul>
+                    <p class="text-muted" style="text-align: left;font-size: 10px;font-family: Roboto, sans-serif;">*It is important to note that genre and demographic have heavy overlap and the most popular tropes used within these genres are often not a requirement.<br> What defines a series is the classification of the magazine it is serialized in.</p>
+                </div>
+                <div class="col-md-4" style="padding: 20px;">
+                    <div class="carousel slide" data-ride="carousel" id="carousel-1">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"><img class="img-fluid w-100 d-block" src="assets/img/revengers.png" alt="Slide Image"></div>
+                            <div class="carousel-item"><img class="img-fluid w-100 d-block" src="assets/img/jjk.jpg" alt="Slide Image"></div>
+                            <div class="carousel-item"><img class="img-fluid w-100 d-block" src="assets/img/berserk.jpg" alt="Slide Image"></div>
+                        </div>
+                        <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev"><span class="carousel-control-prev-icon"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button" data-slide="next"><span class="carousel-control-next-icon"></span><span class="sr-only">Next</span></a></div>
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-1" data-slide-to="1"></li>
+                            <li data-target="#carousel-1" data-slide-to="2"></li>
+                        </ol>
+                    </div>
+                    <p class="text-muted" style="font-size: 14px;font-family: Roboto, sans-serif;">Most manga are serialized in weekly magazines before they are printed in the single volumes that are popular in the West.&nbsp;</p>
+                </div>
+            </div>
+            <section class="bg-white" id="portfolio" style="padding: 20px 0px;height: 214px;margin-top: 97px;margin-bottom: 30px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 text-center d-inline" style="margin-top: -38px;">
+                            <h2 class="text-uppercase section-heading" style="margin: -26px;margin-bottom: 75px;font-family: Archivo, sans-serif;font-size: 75px;height: 115px;color: #775376;"><strong>THE BIG 3&nbsp;</strong></h2>
+                            <h3 class="text-muted section-subheading" style="font-family: Roboto, sans-serif;font-size: 15px;margin-top: -22px;">"The Big 3" is a term used in the west by the English speaking manga fandom and refers to the three best-selling titles that dominated sales in Japan in the early 2000s.&nbsp;&nbsp;<br></h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="row text-center">
+                <div class="col-md-4"><span class="fa-stack fa-4x"><img class="img-fluid" src="assets/img/naruto.png" style="width: 132px;"></span>
+                    <h4 class="section-heading" style="color: #3a9480;font-family: 'Archivo Narrow', sans-serif;font-size: 49px;">Naruto</h4>
+                    <p class="text-muted" style="font-family: Roboto, sans-serif;font-size: 14px;">Arguably one of the most popular anime to come to the West in the early 2000s. From the chart below you can see that Naruto is the most consistent of The Big 3 with sales not dropping off until it ended its run in the 2014. Naruto also has a follow-up series titled Boruto.</p>
+                    <div><canvas data-bss-chart="{&quot;type&quot;:&quot;bar&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;2010&quot;,&quot;2011&quot;,&quot;2012&quot;,&quot;2013&quot;,&quot;2014&quot;,&quot;2015&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Sales (Millions)&quot;,&quot;backgroundColor&quot;:&quot;#775376&quot;,&quot;borderColor&quot;:&quot;#3a9480&quot;,&quot;data&quot;:[&quot;7409068&quot;,&quot;6874840&quot;,&quot;6495240&quot;,&quot;5553933&quot;,&quot;5505179&quot;,&quot;1324693&quot;]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:true,&quot;legend&quot;:{&quot;display&quot;:true,&quot;position&quot;:&quot;bottom&quot;},&quot;title&quot;:{&quot;display&quot;:false},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;drawBorder&quot;:true},&quot;ticks&quot;:{&quot;beginAtZero&quot;:false}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;drawBorder&quot;:true},&quot;ticks&quot;:{&quot;beginAtZero&quot;:false}}]}}}"></canvas></div>
+                </div>
+                <div class="col-md-4"><span class="fa-stack fa-4x"><img class="img-fluid" src="assets/img/onepiece.png" style="width: 132px;height: 111px;"></span>
+                    <h4 class="section-heading" style="color: #3a9480;font-family: 'Archivo Narrow', sans-serif;font-size: 48px;">One Piece</h4>
+                    <p class="text-muted" style="font-family: Roboto, sans-serif;font-size: 14px;">The undisputed best-selling manga of all time, ONE PIECE was the best-selling for 12 straight years until Demon Slayer took the title in 2019. ONE PIECE often ranks much higher in sales but is not the most popular of The Big 3 when speaking in an international context.</p>
+                    <div><canvas data-bss-chart="{&quot;type&quot;:&quot;bar&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;2010&quot;,&quot;2011&quot;,&quot;2012&quot;,&quot;2013&quot;,&quot;2014&quot;,&quot;2015&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Sales (Millions)&quot;,&quot;backgroundColor&quot;:&quot;#775376&quot;,&quot;borderColor&quot;:&quot;#39a288&quot;,&quot;data&quot;:[&quot;32343805&quot;,&quot;37996373&quot;,&quot;23464866&quot;,&quot;18151599&quot;,&quot;11885957&quot;,&quot;14102521&quot;]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:true,&quot;legend&quot;:{&quot;display&quot;:true,&quot;position&quot;:&quot;bottom&quot;},&quot;title&quot;:{&quot;display&quot;:false,&quot;text&quot;:&quot;Sales&quot;}}}"></canvas></div>
+                </div>
+                <div class="col-md-4"><span class="fa-stack fa-4x"><img class="img-fluid" src="assets/img/bleach.png" style="width: 132px;height: 111.069px;"></span>
+                    <h4 class="section-heading" style="color: #3a9480;font-size: 49px;font-family: 'Archivo Narrow', sans-serif;">Bleach</h4>
+                    <p class="text-muted" style="font-family: Roboto, sans-serif;font-size: 14px;">&nbsp;Bleach often ranks much lower than both Naruto and One Piece and the series place in The Big 3 is often debated due to the huge drop in popularity around the beginning of 2010 and the rise in popularity in titles such as Fairy Tail, Kuroko's Basketball and Silver Spoon.&nbsp;</p>
+                    <div><canvas data-bss-chart="{&quot;type&quot;:&quot;bar&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;2010&quot;,&quot;2011&quot;,&quot;2012&quot;,&quot;2013&quot;,&quot;2014&quot;,&quot;2015&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Sales (Millions)&quot;,&quot;backgroundColor&quot;:&quot;#775376&quot;,&quot;borderColor&quot;:&quot;#3a9480&quot;,&quot;data&quot;:[&quot;5204193&quot;,&quot;4187258&quot;,&quot;2974750&quot;,&quot;2752588&quot;,&quot;2986968&quot;,&quot;2818926&quot;]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:true,&quot;legend&quot;:{&quot;display&quot;:true,&quot;position&quot;:&quot;bottom&quot;},&quot;title&quot;:{}}}"></canvas></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                  <h2 class="text-uppercase" style="font-family: Archivo, sans-serif;font-size: 75px;color: #775376;">the heavy-hitters&nbsp;</h2>
+                  <h3 class="text-muted section-subheading" style="font-family: Roboto, sans-serif;font-size: 18px;"><em>A visual primer of which series was #1 from 2010 through 2020</em></h3>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-lg-12">
+                  <ul class="list-group timeline">
+                      <li class="list-group-item">
+                          <div class="timeline-image" style="border-color: #775376;background: rgb(255,255,255);"><img class="rounded-circle img-fluid border d-inline" src="assets/img/about/luffy.jpg"></div>
+                          <div class="timeline-panel">
+                              <div class="timeline-heading">
+                                  <h4 style="font-size: 40px;color:#775376;">2010</h4>
+                                  <h5 class="subheading">One Piece</h5>
+                              </div>
+                              <div class="timeline-body">
+                                  <p class="text-muted" data-aos="fade-up" style="font-family: Roboto, sans-serif;font-size: 14px;">ONE PIECE is 2010's best-selling manga outselling Naruto, the second bestseller,&nbsp; by almost thirty million copies.&nbsp;&nbsp;</p>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="list-group-item timeline-inverted">
+                          <div class="timeline-image" style="border-color: #3a9480;background: rgba(254,209,54,0);"><img class="rounded-circle img-fluid d-inline" src="assets/img/about/luffy.jpg"></div>
+                          <div class="timeline-panel">
+                              <div class="timeline-heading">
+                                  <h4 style="font-size: 40px;color:#775376;">2011</h4>
+                                  <h5 class="subheading">One Piece</h5>
+                              </div>
+                              <div class="timeline-body">
+                                  <p class="text-muted" data-aos="fade-up" style="font-size: 14px;font-family: Roboto, sans-serif;">ONE PIECE is once again the best-selling manga of 2011, outselling the remainder of the top 10's sales combined.&nbsp;</p>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="list-group-item">
+                          <div class="timeline-image" style="border-color: #775376;background: rgba(255,255,255,0);"><img class="rounded-circle img-fluid d-inline" src="assets/img/about/luffy.jpg"></div>
+                          <div class="timeline-panel">
+                              <div class="timeline-heading">
+                                  <h4 style="font-size: 40px;color:#775376;">2012</h4>
+                                  <h5 class="subheading">One Piece</h5>
+                              </div>
+                              <div class="timeline-body">
+                                  <p class="text-muted" data-aos="fade-up" style="font-size: 14px;font-family: Roboto, sans-serif;">ONE PIECE sells almost three times as much as the other entries in the top 10.&nbsp;</p>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="list-group-item timeline-inverted">
+                          <div class="timeline-image" style="border-color: #3a9480;border-top-color: rgb(255,;border-right-color: 255,;border-bottom-color: 255);border-left-color: 255,;background: rgba(254,209,54,0);"><img class="rounded-circle img-fluid d-inline" src="assets/img/about/luffy.jpg"></div>
+                          <div class="timeline-panel">
+                              <div class="timeline-heading">
+                                  <h4 style="font-size: 40px;color:#775376;">2013</h4>
+                                  <h5 class="subheading">One Piece</h5>
+                              </div>
+                              <div class="timeline-body">
+                                  <p class="text-muted" data-aos="fade-up" style="font-size: 14px;font-family: Roboto, sans-serif;">ONE PIECE is once again the best-selling manga however its sales are followed closely by Attack on Titan and Kuroko's Basketball.&nbsp;</p>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="list-group-item">
+                          <div class="timeline-image" style="border-color: #775376;background: rgba(254,209,54,0);"><img class="rounded-circle img-fluid d-inline" src="assets/img/about/luffy.jpg"></div>
+                          <div class="timeline-panel">
+                              <div class="timeline-heading">
+                                  <h4 style="font-size: 40px;color:#775376;">2014</h4>
+                                  <h5 class="subheading">One Piece</h5>
+                              </div>
+                              <div class="timeline-body">
+                                  <p class="text-muted" data-aos="fade-up" style="font-family: Roboto, sans-serif;font-size: 14px;">ONE PIECE sales fell drastically due to the rise of Attack on Titan.</p>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="list-group-item timeline-inverted">
+                          <div class="timeline-image" style="border-color: #3a9480;background: rgba(255,255,255,0);"><img class="rounded-circle img-fluid d-inline" src="assets/img/about/luffy.jpg"></div>
+                          <div class="timeline-panel">
+                              <div class="timeline-heading">
+                                  <h4 style="font-size: 40px;color:#775376;">2015</h4>
+                                  <h5 class="subheading">One Piece</h5>
+                              </div>
+                              <div class="timeline-body">
+                                  <p class="text-muted" data-aos="fade-up" style="font-size: 14px;font-family: Roboto, sans-serif;">ONE PIECE keeps the top spot but is closely followed by The Seven Deadly Sins.</p>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="list-group-item">
+                          <div class="timeline-image" style="border-color: #775376;background: rgba(254,209,54,0);"><img class="rounded-circle img-fluid d-inline" src="assets/img/about/luffy.jpg"></div>
+                          <div class="timeline-panel">
+                              <div class="timeline-heading">
+                                  <h4 style="font-size: 40px;color:#775376;">2016</h4>
+                                  <h5 class="subheading">One Piece</h5>
+                              </div>
+                              <div class="timeline-body">
+                                  <p class="text-muted" data-aos="fade-up" style="font-size: 14px;font-family: Roboto, sans-serif;">ONE PIECE proves its staying power and doubles the sales of the second bestseller The Seven Deadly Sins.&nbsp;</p>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="list-group-item timeline-inverted">
+                          <div class="timeline-image" style="border-color: #3a9480;background: rgba(254,209,54,0);"><img class="rounded-circle img-fluid d-inline" src="assets/img/about/luffy.jpg"></div>
+                          <div class="timeline-panel">
+                              <div class="timeline-heading">
+                                  <h4 style="font-size: 40px;color:#775376;">2017</h4>
+                                  <h5 class="subheading">One Piece</h5>
+                              </div>
+                              <div class="timeline-body">
+                                  <p class="text-muted" data-aos="fade-up" style="font-size: 14px;font-family: Roboto, sans-serif;">ONE PIECE once again reigns supreme and doubles Attack on Titan's sales.&nbsp;</p>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="list-group-item">
+                          <div class="timeline-image" style="border-color: #775376;background: rgba(254,209,54,0);"><img class="rounded-circle img-fluid d-inline" src="assets/img/about/luffy.jpg"></div>
+                          <div class="timeline-panel">
+                              <div class="timeline-heading">
+                                  <h4 style="font-size: 40px;color:#775376;">2018</h4>
+                                  <h5 class="subheading">One Piece</h5>
+                              </div>
+                              <div class="timeline-body">
+                                  <p class="text-muted" data-aos="fade-up" style="font-size: 14px;font-family: Roboto, sans-serif;">ONE PIECE remains the best seller but is followed very closely by a new popular entry: Boku no Hero Academia.</p>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="list-group-item timeline-inverted">
+                          <div class="timeline-image" style="border-color: #3a9480;background: rgba(254,209,54,0);"><img class="rounded-circle img-fluid border d-inline" src="assets/img/about/np_file_46394-200x200.jpeg"></div>
+                          <div class="timeline-panel">
+                              <div class="timeline-heading">
+                                  <h4 style="font-size: 40px;color:#775376;">2019</h4>
+                                  <h5 class="subheading">Demon Slayer</h5>
+                              </div>
+                              <div class="timeline-body">
+                                  <p class="text-muted" data-aos="fade-up" style="font-size: 14px;font-family: Roboto, sans-serif;">For the first time in 12 years One Piece is not Japan's best-selling manga. After receiving an anime adaptation this year Demon Slayer becomes Japan's bestseller.&nbsp;<br></p>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="list-group-item">
+                          <div class="timeline-image" style="background: rgba(254,209,54,0);border-color: #775376;"><img class="rounded-circle img-fluid border" src="assets/img/about/np_file_46394-200x200.jpeg"></div>
+                          <div class="timeline-panel">
+                              <div class="timeline-heading">
+                                  <h4 style="font-size: 40px;color:#775376;">2020</h4>
+                                  <h5 class="subheading">Demon Slayer</h5>
+                              </div>
+                              <div class="timeline-body">
+                                  <p class="text-muted" data-aos="fade-up" style="font-size: 14px;font-family: Roboto, sans-serif;">Demon Slayer once again dethrones ONE PIECE but this time as the best-selling series and the bestseller by volume. <br><br>Demon Slayer had no volume entries in the top five in 2019 despite being the best-selling series but claims the entirety of the top twenty this year.</p>
+                              </div>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+    </section>
+    <section id="team">
+      <div class="container">
+        <h1 class="text-center text-uppercase" style="color:#775376;font-size: 75px;margin-top:-178px;">A Deeper Look</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                  <p class="text-muted text-center" style="font-size: 14px;font-family: Roboto, sans-serif;">Click the dropdown to view the top 5 bestsellers by volume. It's
+                  an interesting look into which series tend to dominate market.</p>
+                  <form id="form1" name="form2" onchange="drawChart()">
+<center>
+    <select id="thedropdown">
+    <option value="2010">2010</option>
+    <option value="2011">2011</option>
+    <option value="2012">2012</option>
+    <option value="2013">2013</option>
+    <option value="2014">2014</option>
+    <option value="2015">2015</option>
+    <option value="2016">2016</option>
+    <option value="2017">2017</option>
+    <option value="2018">2018</option>
+    <option value="2019">2019</option>
+    <option value="2020">2020</option>
+    </select>
+ </form>
+   <div id="piechart"></div>
+                    </div>
+                </div>
+              </center>
+    </section>
+
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                  <h1 class="text-center text-uppercase" style="color:#775376;margin-top:-180px;margin-bottom:50px;font-size:60px">TEN YEARS IN MANGA SALES</h1>
+                  <p class="text-muted text-center" style="font-size: 14px;font-family: Roboto, sans-serif;">Fans have long wondered which Weekly Shonen Jump titles would become the new Big 3. A clear winner rose to the top in 2020 with Demon Slayer outselling the competition at almost eighty-three million volumes sold with the next bestseller, Kingdom, coming in at less than ten million copies.
+<br><br>Demon Slayer's success is unprecedented but also can be somewhat explained by anime and manga breaking into the general pop culture sphere around the end of the 2010s. Compared to the early 2000s manga and anime are both more readily available to consumers meaning Demon Slayer had a much easier time becoming a brand than titles that debuted in the early 2000s.
+Digital sales have also added to Demon Slayer's massive success while Naruto, Bleach and ONE PIECE all boasted huge physical sales during their respective runs. <br><br>ONE PIECE is an anomaly since it has been in print since 1999. There seems to be no end in sight and yet it has remained popular making Eiichiro Oda one of the best-selling writers of all time.  <br><br><strong>Use the dropdown to view yearly rankings by volume and series.</strong></p>
+<p class="text-muted text-center" style="font-size: 10px;font-family: Roboto, sans-serif;">All data was compiled using <a href="https://www.oricon.co.jp/special/55505/" target="_blank">Oricon</a></p>
+                  <select id="ddlAge" class="ddlFilterTableRow dontcenter" data-attribute="classification">
+					<option value="0">Select An Option</option>
+					<option value="series">By series</option>
+					<option value="volume">By volume</option>
+
+				</select>
+				<select id="ddlSport" class="ddlFilterTableRow dontcenter" data-attribute="year">
+					<option value="0">Select A Year</option>
+          <option value="2010">2010</option>
+          <option value="2011">2011</option>
+          <option value="2012">2012</option>
+          <option value="2013">2013</option>
+          <option value="2014">2014</option>
+          <option value="2015">2015</option>
+          <option value="2016">2016</option>
+					<option value="2017">2017</option>
+					<option value="2018">2018</option>
+					<option value="2019">2019</option>
+          <option value="2020">2020</option>
+				</select>
+
+
+          <table id="tableProjects" class="table table-bordered table-hover table-condensed tablebackground ">
+              <tbody class="dontcenter">
+
+                <tr>
+                      <th>YEAR</th>
+                      <th>RANK</th>
+                      <th>NAME</th>
+                      <th>ESTIMATED COPIES SOLD</th>
+                    </tr>
+
+                    <tr class="Row" data-classification="series" data-year="2020">
+                      <td class="tg-0pky">2020</td>
+                      <td class="tg-0pky">1</td>
+                      <td class="tg-0pky">Demon Slayer</td>
+                      <td class="tg-0pky">82,345,447</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2020">
+                      <td class="tg-0pky">2020</td>
+                      <td class="tg-0pky">2</td>
+                      <td class="tg-0pky">Kingdom</td>
+                      <td class="tg-0pky">8,251,058</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2020">
+                      <td class="tg-0pky">2020</td>
+                      <td class="tg-0pky">3</td>
+                      <td class="tg-0pky">One Piece</td>
+                      <td class="tg-0pky">7,709,667</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2020">
+                      <td class="tg-0pky">2020</td>
+                      <td class="tg-0pky">4</td>
+                      <td class="tg-0pky">Haikyu!!</td>
+                      <td class="tg-0pky">7,212,099</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2020">
+                      <td class="tg-0pky">2020</td>
+                      <td class="tg-0pky">5</td>
+                      <td class="tg-0pky">Jujutsu Kaisen</td>
+                      <td class="tg-0pky">6,702,736</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2019">
+                      <td class="tg-0pky">2019</td>
+                      <td class="tg-0pky">1</td>
+                      <td class="tg-0pky">Demon Slayer: Kimetsu no Yaiba</td>
+                      <td class="tg-0pky">12,057,628</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2019">
+                      <td class="tg-0pky">2019</td>
+                      <td class="tg-0pky">2</td>
+                      <td class="tg-0pky">ONE PIECE</td>
+                      <td class="tg-0pky">10,134,232</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2019">
+                      <td class="tg-0pky">2019</td>
+                      <td class="tg-0pky">3</td>
+                      <td class="tg-0pky">Kingdom</td>
+                      <td class="tg-0pky">7,661,361</td>
+                    </tr>
+                  <tr class="Row" data-classification="series" data-year="2019">
+                    <td class="tg-0pky">2019</td>
+                      <td class="tg-0pky">4</td>
+                      <td class="tg-0pky">The Promised Neverland</td>
+                      <td class="tg-0pky">7,454,745</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2019">
+                      <td class="tg-0pky">2019</td>
+                      <td class="tg-0pky">5</td>
+                      <td class="tg-0pky">The Quintessential Quintuplets</td>
+                      <td class="tg-0pky">5,895,000</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2019">
+                      <td class="tg-0pky">2019</td>
+                      <td class="tg-0pky">6</td>
+                      <td class="tg-0pky">My Hero Academia</td>
+                      <td class="tg-0pky">5,047,574</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2019">
+                      <td class="tg-0pky">2019</td>
+                      <td class="tg-0pky">7</td>
+                      <td class="tg-0pky">Attack on Titan</td>
+                      <td class="tg-0pky">4,704,234</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2019">
+                      <td class="tg-0pky">2019</td>
+                      <td class="tg-0pky">8</td>
+                      <td class="tg-0pky">Haikyu!!</td>
+                      <td class="tg-0pky">4,514,838</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2019">
+                      <td class="tg-0pky">2019</td>
+                      <td class="tg-0pky">9</td>
+                      <td class="tg-0pky">Kaguya-sama: Love is War</td>
+                      <td class="tg-0pky">4,096,492</td>
+                    </tr>
+                  <tr class="Row" data-classification="series" data-year="2019">
+                      <td class="tg-0pky">2019</td>
+                      <td class="tg-0pky">10</td>
+                      <td class="tg-0pky">That Time I Got Reincarnated as a Slime manga</td>
+                      <td class="tg-0pky">3,414,482</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2018">
+                      <td class="tg-0pky">2018</td>
+                      <td class="tg-0pky">1</td>
+                      <td class="tg-0pky">One Piece</td>
+                      <td class="tg-0pky">8,113,317</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2018">
+                      <td class="tg-0pky">2018</td>
+                      <td class="tg-0pky">2</td>
+                      <td class="tg-0pky">My Hero Academia</td>
+                      <td class="tg-0pky">6,718,185</td>
+                    </tr>
+                  <tr class="Row" data-classification="series" data-year="2018">
+                    <td class="tg-0pky">2018</td>
+                      <td class="tg-0pky">3</td>
+                      <td class="tg-0pky">Attack on Titan</td>
+                      <td class="tg-0pky">5,235,963</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2018">
+                      <td class="tg-0pky">2018</td>
+                      <td class="tg-0pky">4</td>
+                      <td class="tg-0pky">Slam Dunk</td>
+                      <td class="tg-0pky">5,214,085</td>
+                    </tr>
+                  <tr class="Row" data-classification="series" data-year="2018">
+                      <td class="tg-0pky">2018</td>
+                      <td class="tg-0pky">5</td>
+                      <td class="tg-0pky">Haikyu!!</td>
+                      <td class="tg-0pky">5,030,624</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2018">
+                      <td class="tg-0pky">2018</td>
+                      <td class="tg-0pky">6</td>
+                      <td class="tg-0pky">Kingdom</td>
+                      <td class="tg-0pky">4,970,171</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2018">
+                      <td class="tg-0pky">2018</td>
+                      <td class="tg-0pky">7</td>
+                      <td class="tg-0pky">The Seven Deadly Sins</td>
+                      <td class="tg-0pky">4,867,680</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2018">
+                      <td class="tg-0pky">2018</td>
+                      <td class="tg-0pky">8</td>
+                      <td class="tg-0pky">The Promised Neverland</td>
+                      <td class="tg-0pky">4,246,955</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2018">
+                      <td class="tg-0pky">2018</td>
+                      <td class="tg-0pky">9</td>
+                      <td class="tg-0pky">That Time I Got Reincarnated as a Slime</td>
+                      <td class="tg-0pky">3,460,066</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2018">
+                      <td class="tg-0pky">2018</td>
+                      <td class="tg-0pky">10</td>
+                      <td class="tg-0pky">Tokyo Ghoul:re</td>
+                      <td class="tg-0pky">3,267,843</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2017">
+                      <td class="tg-0pky">2017</td>
+                      <td class="tg-0pky">1</td>
+                      <td class="tg-0pky">One Piece</td>
+                      <td class="tg-0pky">11,495,532</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2017">
+                      <td class="tg-0pky">2017</td>
+                      <td class="tg-0pky">2</td>
+                      <td class="tg-0pky">Attack on Titan</td>
+                      <td class="tg-0pky">6,622,781</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2017">
+                      <td class="tg-0pky">2017</td>
+                      <td class="tg-0pky">3</td>
+                      <td class="tg-0pky">Kingdom</td>
+                      <td class="tg-0pky">6,184,214</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2017">
+                      <td class="tg-0pky">2017</td>
+                      <td class="tg-0pky">4</td>
+                      <td class="tg-0pky">My Hero Academia</td>
+                      <td class="tg-0pky">5,852,310</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2017">
+                      <td class="tg-0pky">2017</td>
+                      <td class="tg-0pky">5</td>
+                      <td class="tg-0pky">Tokyo Ghoul:re</td>
+                      <td class="tg-0pky">5,303,514</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2017">
+                      <td class="tg-0pky">2017</td>
+                      <td class="tg-0pky">6</td>
+                      <td class="tg-0pky">Haikyu!!</td>
+                      <td class="tg-0pky">5,067,939</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2017">
+                      <td class="tg-0pky">2017</td>
+                      <td class="tg-0pky">7</td>
+                      <td class="tg-0pky">The Seven Deadly Sins</td>
+                      <td class="tg-0pky">3,592,571</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2017">
+                      <td class="tg-0pky">2017</td>
+                      <td class="tg-0pky">8</td>
+                      <td class="tg-0pky">One-Punch Man</td>
+                      <td class="tg-0pky">3,223,151</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2017">
+                      <td class="tg-0pky">2017</td>
+                      <td class="tg-0pky">9</td>
+                      <td class="tg-0pky">Food Wars</td>
+                      <td class="tg-0pky">2,792,441</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2017">
+                      <td class="tg-0pky">2017</td>
+                      <td class="tg-0pky">10</td>
+                      <td class="tg-0pky">Magi</td>
+                      <td class="tg-0pky">2,713,074</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2016">
+                      <td class="tg-0pky">2016</td>
+                      <td class="tg-0pky">1</td>
+                      <td class="tg-0pky">One Piece</td>
+                      <td class="tg-0pky">12,314,326</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2016">
+                      <td class="tg-0pky">2016</td>
+                      <td class="tg-0pky">2</td>
+                      <td class="tg-0pky">Assassination Classroom</td>
+                      <td class="tg-0pky">6,887,192</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2016">
+                      <td class="tg-0pky">2016</td>
+                      <td class="tg-0pky">3</td>
+                      <td class="tg-0pky">Kingdom</td>
+                      <td class="tg-0pky">6,595,968</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2016">
+                      <td class="tg-0pky">2016</td>
+                      <td class="tg-0pky">4</td>
+                      <td class="tg-0pky">Attack on Titan</td>
+                      <td class="tg-0pky">6,544,081</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2016">
+                      <td class="tg-0pky">2016</td>
+                      <td class="tg-0pky">5</td>
+                      <td class="tg-0pky">Haikyu!!</td>
+                      <td class="tg-0pky">6,474,394</td>
+                    </tr>
+                  <tr class="Row" data-classification="series" data-year="2016">
+                    <td class="tg-0pky">2016</td>
+                      <td class="tg-0pky">6</td>
+                      <td class="tg-0pky">The Seven Deadly Sins</td>
+                      <td class="tg-0pky">5,115,573</td>
+                    </tr>
+                  <tr class="Row" data-classification="series" data-year="2016">
+                    <td class="tg-0pky">2016</td>
+                      <td class="tg-0pky">7</td>
+                      <td class="tg-0pky">My Hero Academia</td>
+                      <td class="tg-0pky">5,114,916</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2016">
+                      <td class="tg-0pky">2016</td>
+                      <td class="tg-0pky">8</td>
+                      <td class="tg-0pky">Tokyo Ghoul:re</td>
+                      <td class="tg-0pky">4,278,599</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2016">
+                      <td class="tg-0pky">2016</td>
+                      <td class="tg-0pky">9</td>
+                      <td class="tg-0pky">One-Punch Man</td>
+                      <td class="tg-0pky">3,979,760</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2016">
+                      <td class="tg-0pky">2016</td>
+                      <td class="tg-0pky">10</td>
+                      <td class="tg-0pky">Food Wars</td>
+                      <td class="tg-0pky">3,477,128</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2015">
+                      <td class="tg-0pky">2015</td>
+                      <td class="tg-0pky">1</td>
+                      <td class="tg-0pky">One Piece</td>
+                      <td class="tg-0pky">14,102,521</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2015">
+                      <td class="tg-0pky">2015</td>
+                      <td class="tg-0pky">2</td>
+                      <td class="tg-0pky">The Seven Deadly Sins</td>
+                      <td class="tg-0pky">10,304,112</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2015">
+                      <td class="tg-0pky">2015</td>
+                      <td class="tg-0pky">3</td>
+                      <td class="tg-0pky">Attack on Titan</td>
+                      <td class="tg-0pky">8,778,048</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2015">
+                      <td class="tg-0pky">2015</td>
+                      <td class="tg-0pky">4</td>
+                      <td class="tg-0pky">Assassination Classroom</td>
+                      <td class="tg-0pky">8,605,861</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2015">
+                      <td class="tg-0pky">2015</td>
+                      <td class="tg-0pky">5</td>
+                      <td class="tg-0pky">Kingdom</td>
+                      <td class="tg-0pky">8,569,215</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2015">
+                      <td class="tg-0pky">2015</td>
+                      <td class="tg-0pky">6</td>
+                      <td class="tg-0pky">Haikyu!!</td>
+                      <td class="tg-0pky">6,531,508</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2015">
+                      <td class="tg-0pky">2015</td>
+                      <td class="tg-0pky">7</td>
+                      <td class="tg-0pky">Food Wars: Shokugeki no Soma</td>
+                      <td class="tg-0pky">4,321,830</td>
+                    </tr>
+                  <tr class="Row" data-classification="series" data-year="2015">
+                    <td class="tg-0pky">2015</td>
+                      <td class="tg-0pky">8</td>
+                      <td class="tg-0pky">Terra Formars</td>
+                      <td class="tg-0pky">4,188,158</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2015">
+                      <td class="tg-0pky">2015</td>
+                      <td class="tg-0pky">9</td>
+                      <td class="tg-0pky">Prison School</td>
+                      <td class="tg-0pky">4,058,119</td>
+                    </tr>
+                  <tr class="Row" data-classification="series" data-year="2015">
+                    <td class="tg-0pky">2015</td>
+                      <td class="tg-0pky">10</td>
+                      <td class="tg-0pky">Tokyo Ghoul:re</td>
+                      <td class="tg-0pky">3,758,541</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2014">
+                      <td class="tg-0pky">2014</td>
+                      <td class="tg-0pky">1</td>
+                      <td class="tg-0pky">One Piece</td>
+                      <td class="tg-0pky">11,885,957</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2014">
+                      <td class="tg-0pky">2014</td>
+                      <td class="tg-0pky">2</td>
+                      <td class="tg-0pky">Attack on Titan</td>
+                      <td class="tg-0pky">11,728,368</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2014">
+                      <td class="tg-0pky">2014</td>
+                      <td class="tg-0pky">3</td>
+                      <td class="tg-0pky">Haikyu!!</td>
+                      <td class="tg-0pky">8,283,709</td>
+                    </tr>
+                  <tr class="Row" data-classification="series" data-year="2014">
+                      <td class="tg-0pky">2014</td>
+                      <td class="tg-0pky">4</td>
+                      <td class="tg-0pky">Tokyo Ghoul</td>
+                      <td class="tg-0pky">6,946,203</td>
+                    </tr>
+                  <tr class="Row" data-classification="series" data-year="2014">
+                    <td class="tg-0pky">2014</td>
+                      <td class="tg-0pky">5</td>
+                      <td class="tg-0pky">Kuroko's Basketball</td>
+                      <td class="tg-0pky">6,729,439</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2014">
+                      <td class="tg-0pky">2014</td>
+                      <td class="tg-0pky">6</td>
+                      <td class="tg-0pky">Naruto</td>
+                      <td class="tg-0pky">5,505,179</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2014">
+                      <td class="tg-0pky">2014</td>
+                      <td class="tg-0pky">7</td>
+                      <td class="tg-0pky">Ace of Diamond</td>
+                      <td class="tg-0pky">4,681,031</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2014">
+                      <td class="tg-0pky">2014</td>
+                      <td class="tg-0pky">8</td>
+                      <td class="tg-0pky">Magi: The Labyrinth of Magic</td>
+                      <td class="tg-0pky">4,657,971</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2014">
+                      <td class="tg-0pky">2014</td>
+                      <td class="tg-0pky">9</td>
+                      <td class="tg-0pky">The Seven Deadly Sins</td>
+                      <td class="tg-0pky">4,633,246</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2014">
+                      <td class="tg-0pky">2014</td>
+                      <td class="tg-0pky">10</td>
+                      <td class="tg-0pky">Assassination Classroom</td>
+                      <td class="tg-0pky">4,622,108</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2013">
+                      <td class="tg-0pky">2013</td>
+                      <td class="tg-0pky">1</td>
+                      <td class="tg-0pky">One Piece</td>
+                      <td class="tg-0pky">18,151,599</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2013">
+                      <td class="tg-0pky">2013</td>
+                      <td class="tg-0pky">2</td>
+                      <td class="tg-0pky">Attack on Titan</td>
+                      <td class="tg-0pky">15,933,801</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2013">
+                      <td class="tg-0pky">2013</td>
+                      <td class="tg-0pky">3</td>
+                      <td class="tg-0pky">Kuroko's Basketball</td>
+                      <td class="tg-0pky">8,761,081</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2013">
+                      <td class="tg-0pky">2013</td>
+                      <td class="tg-0pky">4</td>
+                      <td class="tg-0pky">Magi: The Labyrinth of Magic</td>
+                      <td class="tg-0pky">7,151,001</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2013">
+                      <td class="tg-0pky">2013</td>
+                      <td class="tg-0pky">5</td>
+                      <td class="tg-0pky">Naruto</td>
+                      <td class="tg-0pky">5,553,933</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2013">
+                      <td class="tg-0pky">2013</td>
+                      <td class="tg-0pky">6</td>
+                      <td class="tg-0pky">Silver Spoon</td>
+                      <td class="tg-0pky">4,858,699</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2013">
+                      <td class="tg-0pky">2013</td>
+                      <td class="tg-0pky">7</td>
+                      <td class="tg-0pky">Assassination Classroom</td>
+                      <td class="tg-0pky">4,595,820</td>
+                    </tr>
+                  <tr class="Row" data-classification="series" data-year="2013">
+                    <td class="tg-0pky">2013</td>
+                      <td class="tg-0pky">8</td>
+                      <td class="tg-0pky">Hunter × Hunter</td>
+                      <td class="tg-0pky">4,231,475</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2013">
+                      <td class="tg-0pky">2013</td>
+                      <td class="tg-0pky">9</td>
+                      <td class="tg-0pky">Fairy Tail</td>
+                      <td class="tg-0pky">3,790,151</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2013">
+                      <td class="tg-0pky">2013</td>
+                      <td class="tg-0pky">10</td>
+                      <td class="tg-0pky">Terra Formars</td>
+                      <td class="tg-0pky">3,602,630</td>
+                    </tr>
+                  <tr class="Row" data-classification="series" data-year="2012">
+                    <td class="tg-0pky">2012</td>
+                      <td class="tg-0pky">1</td>
+                      <td class="tg-0pky">One Piece</td>
+                      <td class="tg-0pky">23,464,866</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2012">
+                      <td class="tg-0pky">2012</td>
+                      <td class="tg-0pky">2</td>
+                      <td class="tg-0pky">Kuroko's Basketball</td>
+                      <td class="tg-0pky">8,070,446</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2012">
+                      <td class="tg-0pky">2012</td>
+                      <td class="tg-0pky">3</td>
+                      <td class="tg-0pky">Naruto</td>
+                      <td class="tg-0pky">6,495,240</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2012">
+                      <td class="tg-0pky">2012</td>
+                      <td class="tg-0pky">4</td>
+                      <td class="tg-0pky">Space Brothers</td>
+                      <td class="tg-0pky">5,413,899</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2012">
+                      <td class="tg-0pky">2012</td>
+                      <td class="tg-0pky">5</td>
+                      <td class="tg-0pky">Fairy Tail</td>
+                      <td class="tg-0pky">4,128,665</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2012">
+                      <td class="tg-0pky">2012</td>
+                      <td class="tg-0pky">6</td>
+                      <td class="tg-0pky">Kimi ni Todoke</td>
+                      <td class="tg-0pky">4,039,715</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2012">
+                      <td class="tg-0pky">2012</td>
+                      <td class="tg-0pky">7</td>
+                      <td class="tg-0pky">Silver Spoon</td>
+                      <td class="tg-0pky">3,603,710</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2012">
+                      <td class="tg-0pky">2012</td>
+                      <td class="tg-0pky">8</td>
+                      <td class="tg-0pky">Hunter X Hunter</td>
+                      <td class="tg-0pky">3,439,839</td>
+                    </tr>
+                  <tr class="Row" data-classification="series" data-year="2012">
+                    <td class="tg-0pky">2012</td>
+                      <td class="tg-0pky">9</td>
+                      <td class="tg-0pky">Magi</td>
+                      <td class="tg-0pky">3,437,182</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2012">
+                      <td class="tg-0pky">2012</td>
+                      <td class="tg-0pky">10</td>
+                      <td class="tg-0pky">Bakuman.</td>
+                      <td class="tg-0pky">3,211,191</td>
+                    </tr>
+                  <tr class="Row" data-classification="series" data-year="2010">
+                    <td class="tg-0pky">2010</td>
+                      <td class="tg-0pky">1</td>
+                      <td class="tg-0pky">One Piece</td>
+                      <td class="tg-0pky">32,343,809</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2010">
+                      <td class="tg-0pky">2010</td>
+                      <td class="tg-0pky">2</td>
+                      <td class="tg-0pky">Naruto</td>
+                      <td class="tg-0pky">7,409,068</td>
+                    </tr>
+                   <tr class="Row" data-classification="series" data-year="2010">
+                     <td class="tg-0pky">2010</td>
+                      <td class="tg-0pky">3</td>
+                      <td class="tg-0pky">Kimi ni Todoke</td>
+                      <td class="tg-0pky">6,572,813</td>
+                    </tr>
+                      <tr class="Row" data-classification="series" data-year="2010">
+                        <td class="tg-0pky">2010</td>
+                      <td class="tg-0pky">4</td>
+                      <td class="tg-0pky">Fairy Tail</td>
+                      <td class="tg-0pky">5,739,526</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2010">
+                      <td class="tg-0pky">2010</td>
+                      <td class="tg-0pky">5</td>
+                      <td class="tg-0pky">Bleach</td>
+                      <td class="tg-0pky">5,204,193</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2010">
+                      <td class="tg-0pky">2010</td>
+                      <td class="tg-0pky">6</td>
+                      <td class="tg-0pky">Fullmetal Alchemist</td>
+                      <td class="tg-0pky">5,165,052</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2010">
+                      <td class="tg-0pky">2010</td>
+                      <td class="tg-0pky">7</td>
+                      <td class="tg-0pky">Gintama</td>
+                      <td class="tg-0pky">3,978,439</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2010">
+                      <td class="tg-0pky">2010</td>
+                      <td class="tg-0pky">8</td>
+                      <td class="tg-0pky">Katekyo Hitman Reborn!</td>
+                      <td class="tg-0pky">3,479,219</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2010">
+                      <td class="tg-0pky">2010</td>
+                      <td class="tg-0pky">9</td>
+                      <td class="tg-0pky">Nurarihyon no Mago</td>
+                      <td class="tg-0pky">3,269,379</td>
+                    </tr>
+                  <tr class="Row" data-classification="series" data-year="2010">
+                    <td class="tg-0pky">2010</td>
+                      <td class="tg-0pky">10</td>
+                      <td class="tg-0pky">Nodame Cantabile</td>
+                      <td class="tg-0pky">3,246,355</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2011">
+                      <td class="tg-0pky">2011</td>
+                      <td class="tg-0pky">1</td>
+                      <td class="tg-0pky">One Piece</td>
+                      <td class="tg-0pky">37,996,373</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2011">
+                      <td class="tg-0pky">2011</td>
+                      <td class="tg-0pky">2</td>
+                      <td class="tg-0pky">Naruto</td>
+                      <td class="tg-0pky">6,874,840</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2011">
+                      <td class="tg-0pky">2011</td>
+                      <td class="tg-0pky">3</td>
+                      <td class="tg-0pky">Blue Exorcist</td>
+                      <td class="tg-0pky">5,223,712</td>
+                    </tr>
+                  <tr class="Row" data-classification="series" data-year="2011">
+                    <td class="tg-0pky">2011</td>
+                      <td class="tg-0pky">4</td>
+                      <td class="tg-0pky">Fairy Tail</td>
+                      <td class="tg-0pky">4,701,596</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2011">
+                      <td class="tg-0pky">2011</td>
+                      <td class="tg-0pky">5</td>
+                      <td class="tg-0pky">Toriko</td>
+                      <td class="tg-0pky">4,665,634</td>
+                    </tr>
+                  <tr class="Row" data-classification="series" data-year="2011">
+                    <td class="tg-0pky">2011</td>
+                      <td class="tg-0pky">6</td>
+                      <td class="tg-0pky">Gintama</td>
+                      <td class="tg-0pky">4,415,491</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2011">
+                      <td class="tg-0pky">2011</td>
+                      <td class="tg-0pky">7</td>
+                      <td class="tg-0pky">Bakuman.</td>
+                      <td class="tg-0pky">4,399,938</td>
+                    </tr>
+                  <tr class="Row" data-classification="series" data-year="2011">
+                    <td class="tg-0pky">2011</td>
+                      <td class="tg-0pky">8</td>
+                      <td class="tg-0pky">Bleach</td>
+                      <td class="tg-0pky">4,187,258</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2011">
+                      <td class="tg-0pky">2011</td>
+                      <td class="tg-0pky">9</td>
+                      <td class="tg-0pky">Kimi ni Todoke</td>
+                      <td class="tg-0pky">4,109,481</td>
+                    </tr>
+                    <tr class="Row" data-classification="series" data-year="2011">
+                      <td class="tg-0pky">2011</td>
+                      <td class="tg-0pky">10</td>
+                      <td class="tg-0pky">Gantz</td>
+                      <td class="tg-0pky">4,056,981</td>
+                      <tr class="Row" data-classification="volume" data-year="2020">
+                        <td class="tg-0lax">2020</td>
+                        <td class="tg-0lax">1</td>
+                          <td class="tg-0lax">Demon Slayer 18</td>
+                          <td class="tg-0lax">3,035,555</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2020">
+                          <td class="tg-0lax">2020</td>
+                          <td class="tg-0lax">2</td>
+                          <td class="tg-0lax">Demon Slayer 19</td>
+                          <td class="tg-0lax">2,829,174</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2020">
+                          <td class="tg-0lax">2020</td>
+                          <td class="tg-0lax">3</td>
+                          <td class="tg-0lax">Demon Slayer 1</td>
+                          <td class="tg-0lax">2,267,744</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2020">
+                          <td class="tg-0lax">2020</td>
+                          <td class="tg-0lax">4</td>
+                          <td class="tg-0lax">Demon Slayer 12</td>
+                          <td class="tg-0lax">2,237,092</td>
+                        </tr>
+                      <tr class="Row" data-classification="volume" data-year="2020">
+                        <td class="tg-0lax">2020</td>
+                          <td class="tg-0lax">5</td>
+                          <td class="tg-0lax">Demon Slayer 11</td>
+                          <td class="tg-0lax">2,234,515</td>
+                        </tr>
+                      <tr class="Row" data-classification="volume" data-year="2020">
+                        <td class="tg-0lax">2020</td>
+                          <td class="tg-0lax">6</td>
+                          <td class="tg-0lax">Demon Slayer 14</td>
+                          <td class="tg-0lax">2,233,412</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2020">
+                          <td class="tg-0lax">2020</td>
+                          <td class="tg-0lax">7</td>
+                          <td class="tg-0lax">Demon Slayer 13</td>
+                          <td class="tg-0lax">2,223,961</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2020">
+                          <td class="tg-0lax">2020</td>
+                          <td class="tg-0lax">8</td>
+                          <td class="tg-0lax">Demon Slayer 7</td>
+                          <td class="tg-0lax">2,223,867</td>
+                        </tr>
+                      <tr class="Row" data-classification="volume" data-year="2020">
+                        <td class="tg-0lax">2020</td>
+                          <td class="tg-0lax">9</td>
+                          <td class="tg-0lax">Demon Slayer 8</td>
+                          <td class="tg-0lax">2,218,826</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2020">
+                          <td class="tg-0lax">2020</td>
+                          <td class="tg-0lax">10</td>
+                          <td class="tg-0lax">Demon Slayer 9</td>
+                          <td class="tg-0lax">2,216,999</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2019">
+                          <td class="tg-0lax">2019</td>
+                          <td class="tg-0lax">1</td>
+                          <td class="tg-0lax">One Piece 91</td>
+                          <td class="tg-0lax">2,388,243</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2019">
+                          <td class="tg-0lax">2019</td>
+                          <td class="tg-0lax">2</td>
+                          <td class="tg-0lax">One Piece 93</td>
+                          <td class="tg-0lax">2,200,000</td>
+                        </tr>
+                      <tr class="Row" data-classification="volume" data-year="2019">
+                        <td class="tg-0lax">2019</td>
+                          <td class="tg-0lax">3</td>
+                          <td class="tg-0lax">One Piece 92</td>
+                          <td class="tg-0lax">2,112,734</td>
+                        </tr>
+                      <tr class="Row" data-classification="volume" data-year="2019">
+                        <td class="tg-0lax">2019</td>
+                          <td class="tg-0lax">4</td>
+                          <td class="tg-0lax">One Piece 94</td>
+                          <td class="tg-0lax">1,880,146</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2019">
+                          <td class="tg-0lax">2019</td>
+                          <td class="tg-0lax">5</td>
+                          <td class="tg-0lax">Attack on Titan 27</td>
+                          <td class="tg-0lax">1,344,500</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2019">
+                          <td class="tg-0lax">2019</td>
+                          <td class="tg-0lax">6</td>
+                          <td class="tg-0lax">Attack on Titan 28</td>
+                          <td class="tg-0lax">1,172,448</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2019">
+                          <td class="tg-0lax">2019</td>
+                          <td class="tg-0lax">7</td>
+                          <td class="tg-0lax">Attack on Titan 29</td>
+                          <td class="tg-0lax">955,124</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2019">
+                          <td class="tg-0lax">2019</td>
+                          <td class="tg-0lax">8</td>
+                          <td class="tg-0lax">Demon Slayer 17</td>
+                          <td class="tg-0lax">926,446</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2019">
+                          <td class="tg-0lax">2019</td>
+                          <td class="tg-0lax">9</td>
+                          <td class="tg-0lax">Demon Slayer 16</td>
+                          <td class="tg-0lax">877,366</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2019">
+                          <td class="tg-0lax">2019</td>
+                          <td class="tg-0lax">10</td>
+                          <td class="tg-0lax">Kingdom 53</td>
+                          <td class="tg-0lax">863,994</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2018">
+                          <td class="tg-0lax">2018</td>
+                          <td class="tg-0lax">1</td>
+                          <td class="tg-0lax">One Piece 88</td>
+                          <td class="tg-0lax">2,476,305</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2018">
+                          <td class="tg-0lax">2018</td>
+                          <td class="tg-0lax">2</td>
+                          <td class="tg-0lax">One Piece 89</td>
+                          <td class="tg-0lax">2,167,146</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2018">
+                          <td class="tg-0lax">2018</td>
+                          <td class="tg-0lax">3</td>
+                          <td class="tg-0lax">One Piece 90</td>
+                          <td class="tg-0lax">2,074,623</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2018">
+                          <td class="tg-0lax">2018</td>
+                          <td class="tg-0lax">4</td>
+                          <td class="tg-0lax">Attack on Titan 24</td>
+                          <td class="tg-0lax">1,48,6038</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2018">
+                          <td class="tg-0lax">2018</td>
+                          <td class="tg-0lax">5</td>
+                          <td class="tg-0lax">Attack on Titan 25</td>
+                          <td class="tg-0lax">1,358,623</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2018">
+                          <td class="tg-0lax">2018</td>
+                          <td class="tg-0lax">6</td>
+                          <td class="tg-0lax">Attack on Titan 26</td>
+                          <td class="tg-0lax">1,226,619</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2018">
+                          <td class="tg-0lax">2018</td>
+                          <td class="tg-0lax">7</td>
+                          <td class="tg-0lax">Hunter x Hunter 35</td>
+                          <td class="tg-0lax">1,090,958</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2018">
+                          <td class="tg-0lax">2018</td>
+                          <td class="tg-0lax">8</td>
+                          <td class="tg-0lax">Hunter x Hunter 36</td>
+                          <td class="tg-0lax">892,834</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2018">
+                          <td class="tg-0lax">2018</td>
+                          <td class="tg-0lax">9</td>
+                          <td class="tg-0lax">Kingdom 50</td>
+                          <td class="tg-0lax">846,414</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2018">
+                          <td class="tg-0lax">2018</td>
+                          <td class="tg-0lax">10</td>
+                          <td class="tg-0lax">Kingdom 49</td>
+                          <td class="tg-0lax">845,862</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2017">
+                          <td class="tg-0lax">2017</td>
+                          <td class="tg-0lax">1</td>
+                          <td class="tg-0lax">One Piece 84</td>
+                          <td class="tg-0lax">2,730,184</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2017">
+                          <td class="tg-0lax">2017</td>
+                          <td class="tg-0lax">2</td>
+                          <td class="tg-0lax">One Piece 85</td>
+                          <td class="tg-0lax">2,688,847</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2017">
+                          <td class="tg-0lax">2017</td>
+                          <td class="tg-0lax">3</td>
+                          <td class="tg-0lax">One Piece 86</td>
+                          <td class="tg-0lax">2,496,033</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2017">
+                          <td class="tg-0lax">2017</td>
+                          <td class="tg-0lax">4</td>
+                          <td class="tg-0lax">One Piece 87</td>
+                          <td class="tg-0lax">2,040,375</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2017">
+                          <td class="tg-0lax">2017</td>
+                          <td class="tg-0lax">5</td>
+                          <td class="tg-0lax">Attack on Titan 21</td>
+                          <td class="tg-0lax">1,701,237</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2017">
+                          <td class="tg-0lax">2017</td>
+                          <td class="tg-0lax">6</td>
+                          <td class="tg-0lax">Attack on Titan 22</td>
+                          <td class="tg-0lax">1,649,614</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2017">
+                          <td class="tg-0lax">2017</td>
+                          <td class="tg-0lax">7</td>
+                          <td class="tg-0lax">Attack on Titan 23</td>
+                          <td class="tg-0lax">1,469,864</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2017">
+                          <td class="tg-0lax">2017</td>
+                          <td class="tg-0lax">8</td>
+                          <td class="tg-0lax">Hunter × Hunter 34</td>
+                          <td class="tg-0lax">1,258,337</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2017">
+                          <td class="tg-0lax">2017</td>
+                          <td class="tg-0lax">9</td>
+                          <td class="tg-0lax">Tokyo Ghoul:re 9</td>
+                          <td class="tg-0lax">961,396</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2017">
+                          <td class="tg-0lax">2017</td>
+                          <td class="tg-0lax">10</td>
+                          <td class="tg-0lax">Tokyo Ghoul:re 10</td>
+                          <td class="tg-0lax">920,372</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2016">
+                          <td class="tg-0lax">2016</td>
+                          <td class="tg-0lax">1</td>
+                          <td class="tg-0lax">One Piece 80</td>
+                          <td class="tg-0lax">2,981,494</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2016">
+                          <td class="tg-0lax">2016</td>
+                          <td class="tg-0lax">2</td>
+                          <td class="tg-0lax">One Piece 81</td>
+                          <td class="tg-0lax">2,696,528</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2016">
+                          <td class="tg-0lax">2016</td>
+                          <td class="tg-0lax">3</td>
+                          <td class="tg-0lax">One Piece 82</td>
+                          <td class="tg-0lax">2,532,488</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2016">
+                          <td class="tg-0lax">2016</td>
+                          <td class="tg-0lax">4</td>
+                          <td class="tg-0lax">One Piece 83</td>
+                          <td class="tg-0lax">2,287,521</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2016">
+                          <td class="tg-0lax">2016</td>
+                          <td class="tg-0lax">5</td>
+                          <td class="tg-0lax">Attack on Titan 18</td>
+                          <td class="tg-0lax">1,983,248</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2016">
+                          <td class="tg-0lax">2016</td>
+                          <td class="tg-0lax">6</td>
+                          <td class="tg-0lax">Attack on Titan 19</td>
+                          <td class="tg-0lax">1,746,669</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2016">
+                          <td class="tg-0lax">2016</td>
+                          <td class="tg-0lax">7</td>
+                          <td class="tg-0lax">Attack on Titan 20</td>
+                          <td class="tg-0lax">1,554,398</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2016">
+                          <td class="tg-0lax">2016</td>
+                          <td class="tg-0lax">8</td>
+                          <td class="tg-0lax">Hunter × Hunter 33</td>
+                          <td class="tg-0lax">1,272,692</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2016">
+                          <td class="tg-0lax">2016</td>
+                          <td class="tg-0lax">9</td>
+                          <td class="tg-0lax">Assassination Classroom 18</td>
+                          <td class="tg-0lax">1,027,550</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2016">
+                          <td class="tg-0lax">2016</td>
+                          <td class="tg-0lax">10</td>
+                          <td class="tg-0lax">Assassination Classroom 17</td>
+                          <td class="tg-0lax">1,009,268</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2015">
+                          <td class="tg-0lax">2015</td>
+                          <td class="tg-0lax">1</td>
+                          <td class="tg-0lax">One Piece 76</td>
+                          <td class="tg-0lax">3,185,018</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2015">
+                          <td class="tg-0lax">2015</td>
+                          <td class="tg-0lax">2</td>
+                          <td class="tg-0lax">One Piece 77</td>
+                          <td class="tg-0lax">3,020,137</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2015">
+                          <td class="tg-0lax">2015</td>
+                          <td class="tg-0lax">3</td>
+                          <td class="tg-0lax">One Piece 78</td>
+                          <td class="tg-0lax">2,977,466</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2015">
+                          <td class="tg-0lax">2015</td>
+                          <td class="tg-0lax">4</td>
+                          <td class="tg-0lax">One Piece 79</td>
+                          <td class="tg-0lax">2,810,583</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2015">
+                          <td class="tg-0lax">2015</td>
+                          <td class="tg-0lax">5</td>
+                          <td class="tg-0lax">Attack on Titan 15</td>
+                          <td class="tg-0lax">2,000,137</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2015">
+                          <td class="tg-0lax">2015</td>
+                          <td class="tg-0lax">6</td>
+                          <td class="tg-0lax">Attack on Titan 16</td>
+                          <td class="tg-0lax">1,920,780</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2015">
+                          <td class="tg-0lax">2015</td>
+                          <td class="tg-0lax">7</td>
+                          <td class="tg-0lax">Attack on Titan 17</td>
+                          <td class="tg-0lax">1,807,155</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2015">
+                          <td class="tg-0lax">2015</td>
+                          <td class="tg-0lax">8</td>
+                          <td class="tg-0lax">Naruto 72</td>
+                          <td class="tg-0lax">1,324,693</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2015">
+                          <td class="tg-0lax">2015</td>
+                          <td class="tg-0lax">9</td>
+                          <td class="tg-0lax">Tokyo Ghoul:re 1</td>
+                          <td class="tg-0lax">1,017,871</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2015">
+                          <td class="tg-0lax">2015</td>
+                          <td class="tg-0lax">10</td>
+                          <td class="tg-0lax">Assassination Classroom 12</td>
+                          <td class="tg-0lax">1,012,500</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2014">
+                          <td class="tg-0lax">2014</td>
+                          <td class="tg-0lax">1</td>
+                          <td class="tg-0lax">One Piece 73</td>
+                          <td class="tg-0lax">3,010,801</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2014">
+                          <td class="tg-0lax">2014</td>
+                          <td class="tg-0lax">2</td>
+                          <td class="tg-0lax">One Piece 74</td>
+                          <td class="tg-0lax">2,834,558</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2014">
+                          <td class="tg-0lax">2014</td>
+                          <td class="tg-0lax">3</td>
+                          <td class="tg-0lax">One Piece 75</td>
+                          <td class="tg-0lax">2,698,071</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2014">
+                          <td class="tg-0lax">2014</td>
+                          <td class="tg-0lax">4</td>
+                          <td class="tg-0lax">Attack on Titan 13</td>
+                          <td class="tg-0lax">1,921,457</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2014">
+                          <td class="tg-0lax">2014</td>
+                          <td class="tg-0lax">5</td>
+                          <td class="tg-0lax">Attack on Titan 12</td>
+                          <td class="tg-0lax">1,895,305</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2014">
+                          <td class="tg-0lax">2014</td>
+                          <td class="tg-0lax">6</td>
+                          <td class="tg-0lax">Attack on Titan 14</td>
+                          <td class="tg-0lax">1,773,871</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2014">
+                          <td class="tg-0lax">2014</td>
+                          <td class="tg-0lax">7</td>
+                          <td class="tg-0lax">Naruto 67</td>
+                          <td class="tg-0lax">1,106,651</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2014">
+                          <td class="tg-0lax">2014</td>
+                          <td class="tg-0lax">8</td>
+                          <td class="tg-0lax">Naruto 68</td>
+                          <td class="tg-0lax">1,098,121</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2014">
+                          <td class="tg-0lax">2014</td>
+                          <td class="tg-0lax">9</td>
+                          <td class="tg-0lax">Kimi ni Todoke 21</td>
+                          <td class="tg-0lax">1,031,380</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2014">
+                          <td class="tg-0lax">2014</td>
+                          <td class="tg-0lax">10</td>
+                          <td class="tg-0lax">Naruto 69</td>
+                          <td class="tg-0lax">1,007,954</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2013">
+                          <td class="tg-0lax">2013</td>
+                          <td class="tg-0lax">1</td>
+                          <td class="tg-0lax">One Piece 69</td>
+                          <td class="tg-0lax">3,147,224</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2013">
+                          <td class="tg-0lax">2013</td>
+                          <td class="tg-0lax">2</td>
+                          <td class="tg-0lax">One Piece 70</td>
+                          <td class="tg-0lax">3,039,487</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2013">
+                          <td class="tg-0lax">2013</td>
+                          <td class="tg-0lax">3</td>
+                          <td class="tg-0lax">One Piece 71</td>
+                          <td class="tg-0lax">2,890,263</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2013">
+                          <td class="tg-0lax">2013</td>
+                          <td class="tg-0lax">4</td>
+                          <td class="tg-0lax">One Piece 72</td>
+                          <td class="tg-0lax">2,354,005</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2013">
+                          <td class="tg-0lax">2013</td>
+                          <td class="tg-0lax">5</td>
+                          <td class="tg-0lax">Attack on Titan 9</td>
+                          <td class="tg-0lax">1,950,807</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2013">
+                          <td class="tg-0lax">2013</td>
+                          <td class="tg-0lax">6</td>
+                          <td class="tg-0lax">Attack on Titan 10</td>
+                          <td class="tg-0lax">1,915,976</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2013">
+                          <td class="tg-0lax">2013</td>
+                          <td class="tg-0lax">7</td>
+                          <td class="tg-0lax">Attack on Titan 11</td>
+                          <td class="tg-0lax">1,453,879</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2013">
+                          <td class="tg-0lax">2013</td>
+                          <td class="tg-0lax">8</td>
+                          <td class="tg-0lax">Attack on Titan 8</td>
+                          <td class="tg-0lax">1,339,845</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2013">
+                          <td class="tg-0lax">2013</td>
+                          <td class="tg-0lax">9</td>
+                          <td class="tg-0lax">Attack on Titan 12</td>
+                          <td class="tg-0lax">1,299,048</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2013">
+                          <td class="tg-0lax">2013</td>
+                          <td class="tg-0lax">10</td>
+                          <td class="tg-0lax">Attack on Titan 1</td>
+                          <td class="tg-0lax">1,267,129</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2012">
+                          <td class="tg-0lax">2012</td>
+                          <td class="tg-0lax">1</td>
+                          <td class="tg-0lax">One Piece 65</td>
+                          <td class="tg-0lax">3,336,992</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2012">
+                          <td class="tg-0lax">2012</td>
+                          <td class="tg-0lax">2</td>
+                          <td class="tg-0lax">One Piece 66</td>
+                          <td class="tg-0lax">3,320,744</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2012">
+                          <td class="tg-0lax">2012</td>
+                          <td class="tg-0lax">3</td>
+                          <td class="tg-0lax">One Piece 67</td>
+                          <td class="tg-0lax">3,044,901</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2012">
+                          <td class="tg-0lax">2012</td>
+                          <td class="tg-0lax">4</td>
+                          <td class="tg-0lax">One Piece 68</td>
+                          <td class="tg-0lax">2,390,625</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2012">
+                          <td class="tg-0lax">2012</td>
+                          <td class="tg-0lax">5</td>
+                          <td class="tg-0lax">Naruto 61</td>
+                          <td class="tg-0lax">1,281,309</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2012">
+                          <td class="tg-0lax">2012</td>
+                          <td class="tg-0lax">6</td>
+                          <td class="tg-0lax">Naruto 60</td>
+                          <td class="tg-0lax">1,266,244</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2012">
+                          <td class="tg-0lax">2012</td>
+                          <td class="tg-0lax">7</td>
+                          <td class="tg-0lax">Kimi ni Todoke 15</td>
+                          <td class="tg-0lax">1,242,035</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2012">
+                          <td class="tg-0lax">2012</td>
+                          <td class="tg-0lax">8</td>
+                          <td class="tg-0lax">Kimi ni Todoke 16</td>
+                          <td class="tg-0lax">1,212,883</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2012">
+                          <td class="tg-0lax">2012</td>
+                          <td class="tg-0lax">9</td>
+                          <td class="tg-0lax">Naruto 59</td>
+                          <td class="tg-0lax">1,192,100</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2012">
+                          <td class="tg-0lax">2012</td>
+                          <td class="tg-0lax">10</td>
+                          <td class="tg-0lax">Hunter X Hunter 30</td>
+                          <td class="tg-0lax">1,090,309</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2011">
+                          <td class="tg-0lax">2011</td>
+                          <td class="tg-0lax">1</td>
+                          <td class="tg-0lax">One Piece 61</td>
+                          <td class="tg-0lax">3,382,588</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2011">
+                          <td class="tg-0lax">2011</td>
+                          <td class="tg-0lax">2</td>
+                          <td class="tg-0lax">One Piece 62</td>
+                          <td class="tg-0lax">3,207,568</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2011">
+                          <td class="tg-0lax">2011</td>
+                          <td class="tg-0lax">3</td>
+                          <td class="tg-0lax">One Piece 63</td>
+                          <td class="tg-0lax">3,073,175</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2011">
+                          <td class="tg-0lax">2011</td>
+                          <td class="tg-0lax">4</td>
+                          <td class="tg-0lax">One Piece 64</td>
+                          <td class="tg-0lax">2,652,700</td>
+                        </tr>
+                      <tr class="Row" data-classification="volume" data-year="2011">
+                        <td class="tg-0lax">2011</td>
+                          <td class="tg-0lax">5</td>
+                          <td class="tg-0lax">Naruto 54</td>
+                          <td class="tg-0lax">1,229,170</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2011">
+                          <td class="tg-0lax">2011</td>
+                          <td class="tg-0lax">6</td>
+                          <td class="tg-0lax">Kimi ni Todoke 13</td>
+                          <td class="tg-0lax">1,228,692</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2011">
+                          <td class="tg-0lax">2011</td>
+                          <td class="tg-0lax">7</td>
+                          <td class="tg-0lax">Kimi ni Todoke 14</td>
+                          <td class="tg-0lax">1,189,589</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2011">
+                          <td class="tg-0lax">2011</td>
+                          <td class="tg-0lax">8</td>
+                          <td class="tg-0lax">Fullmetal Alchemist 27</td>
+                          <td class="tg-0lax">1,144,295</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2011">
+                          <td class="tg-0lax">2011</td>
+                          <td class="tg-0lax">9</td>
+                          <td class="tg-0lax">Naruto 55</td>
+                          <td class="tg-0lax">1,131,672</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2011">
+                          <td class="tg-0lax">2011</td>
+                          <td class="tg-0lax">10</td>
+                          <td class="tg-0lax">Naruto 57</td>
+                          <td class="tg-0lax">1,090,567</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2010">
+                          <td class="tg-0lax">2010</td>
+                          <td class="tg-0lax">1</td>
+                          <td class="tg-0lax">One Piece 59</td>
+                          <td class="tg-0lax">2,593,580</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2010">
+                          <td class="tg-0lax">2010</td>
+                          <td class="tg-0lax">2</td>
+                          <td class="tg-0lax">One Piece 57</td>
+                          <td class="tg-0lax">2,578,730</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2010">
+                          <td class="tg-0lax">2010</td>
+                          <td class="tg-0lax">3</td>
+                          <td class="tg-0lax">One Piece 58</td>
+                          <td class="tg-0lax">2,557,356</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2010">
+                          <td class="tg-0lax">2010</td>
+                          <td class="tg-0lax">4</td>
+                          <td class="tg-0lax">One Piece 60</td>
+                          <td class="tg-0lax">2,492,183</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2010">
+                          <td class="tg-0lax">2010</td>
+                          <td class="tg-0lax">5</td>
+                          <td class="tg-0lax">One Piece 56</td>
+                          <td class="tg-0lax">2,480,124</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2010">
+                          <td class="tg-0lax">2010</td>
+                          <td class="tg-0lax">6</td>
+                          <td class="tg-0lax">Fullmetal Alchemist 25</td>
+                          <td class="tg-0lax">1,340,772</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2010">
+                          <td class="tg-0lax">2010</td>
+                          <td class="tg-0lax">7</td>
+                          <td class="tg-0lax">Fullmetal Alchemist 24</td>
+                          <td class="tg-0lax">1,298,292</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2010">
+                          <td class="tg-0lax">2010</td>
+                          <td class="tg-0lax">8</td>
+                          <td class="tg-0lax">Nodame Cantabile 23</td>
+                          <td class="tg-0lax">1,241,997</td>
+                        </tr>
+                        <tr class="Row" data-classification="volume" data-year="2010">
+                          <td class="tg-0lax">2010</td>
+                          <td class="tg-0lax">9</td>
+                          <td class="tg-0lax">Fullmetal Alchemist 26</td>
+                          <td class="tg-0lax">1,214,468</td>
+                        </tr>
+                      <tr class="Row" data-classification="volume" data-year="2010">
+                        <td class="tg-0lax">2010</td>
+                          <td class="tg-0lax">10</td>
+                          <td class="tg-0lax">Naruto 49</td>
+                          <td class="tg-0lax">1,211,849</td>
+                        </tr>
+
+                </div>
+              </div>
+            </section>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/chart.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="assets/js/agency.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+</body>
+
+</html>
