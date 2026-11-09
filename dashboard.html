@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Explore Japan's bestselling manga series and volumes from 2010 through 2020 with interactive charts and rankings.">
+  <meta name="theme-color" content="#213944">
+  <title>Manga Sales Dashboard: 2010–2020</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&amp;family=Roboto:wght@400;500;700&amp;display=swap">
+  <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/untitled.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body class="dashboard-page">
+  <a class="skip-link" href="#dashboard-main">Skip to dashboard</a>
+  <nav class="navbar navbar-dark navbar-expand-lg fixed-top" id="mainNav" aria-label="Primary navigation">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">The Evolution of Manga</a>
+      <button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars" aria-hidden="true"></i></button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto text-uppercase">
+          <li class="nav-item"><a class="nav-link" href="index.html#services">History</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#team">Sales story</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Rankings</a></li>
+          <li class="nav-item"><a class="nav-link active" href="dashboard.html" aria-current="page">Dashboard</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="dashboard-main" class="dashboard-shell">
+    <header class="dashboard-header">
+      <div class="container dashboard-header-grid">
+        <div>
+          <p class="dashboard-eyebrow">Japan · Oricon estimates · 2010–2020</p>
+          <h1>Manga sales, explored</h1>
+          <p class="dashboard-intro">Compare annual leaders, see how the top-ranked titles stack up, and inspect every record behind the charts.</p>
+        </div>
+        <a class="dashboard-back-link" href="index.html#team"><span aria-hidden="true">←</span> Read the full story</a>
+      </div>
+    </header>
+
+    <div class="container dashboard-content">
+      <section class="filter-panel" aria-labelledby="filters-title">
+        <div class="filter-heading">
+          <div>
+            <p class="panel-kicker">Explore the rankings</p>
+            <h2 id="filters-title">Choose a view</h2>
+          </div>
+          <button id="resetFilters" class="text-button" type="button">Reset filters</button>
+        </div>
+        <div class="filter-grid">
+          <div class="filter-field">
+            <label for="rankingType">Ranking type</label>
+            <select id="rankingType" class="form-control">
+              <option value="series">Series</option>
+              <option value="volume">Individual volumes</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="rankingYear">Year</label>
+            <select id="rankingYear" class="form-control"></select>
+          </div>
+          <div class="filter-field">
+            <label for="topCount">Titles shown</label>
+            <select id="topCount" class="form-control">
+              <option value="5">Top 5</option>
+              <option value="10">Top 10</option>
+            </select>
+          </div>
+          <div class="filter-action">
+            <button id="downloadCsv" class="btn dashboard-button" type="button"><i class="fa fa-download" aria-hidden="true"></i> Download view</button>
+          </div>
+        </div>
+        <p id="dashboardStatus" class="dashboard-status" role="status" aria-live="polite">Loading rankings…</p>
+      </section>
+
+      <section class="kpi-grid" aria-label="Selected ranking highlights">
+        <article class="kpi-card kpi-card-featured">
+          <p class="kpi-label">#1 title</p>
+          <p id="leaderTitle" class="kpi-title">—</p>
+          <p id="leaderContext" class="kpi-note">Selected annual ranking</p>
+        </article>
+        <article class="kpi-card">
+          <p class="kpi-label">Leader's estimated sales</p>
+          <p id="leaderSales" class="kpi-value">—</p>
+          <p class="kpi-note">Copies sold in Japan</p>
+        </article>
+        <article class="kpi-card">
+          <p class="kpi-label">Lead over #2</p>
+          <p id="leaderGap" class="kpi-value">—</p>
+          <p id="leaderGapNote" class="kpi-note">Difference in estimated copies</p>
+        </article>
+        <article class="kpi-card">
+          <p id="shareLabel" class="kpi-label">Leader share of top 5</p>
+          <p id="leaderShare" class="kpi-value">—</p>
+          <p class="kpi-note">Share of the displayed total, not the full market</p>
+        </article>
+      </section>
+
+      <section class="dashboard-grid" aria-label="Sales charts">
+        <article class="chart-card chart-card-wide">
+          <div class="card-heading">
+            <div>
+              <p class="panel-kicker">Across the decade</p>
+              <h2 id="trendTitle">Annual #1 series sales</h2>
+            </div>
+            <span class="chart-unit">Estimated copies</span>
+          </div>
+          <div class="chart-wrap chart-wrap-tall"><canvas id="trendChart" role="img" aria-label="Line chart of annual number-one manga sales from 2010 through 2020"></canvas></div>
+          <p id="trendSummary" class="chart-summary"></p>
+        </article>
+
+        <article class="chart-card chart-card-wide">
+          <div class="card-heading">
+            <div>
+              <p class="panel-kicker">Selected year</p>
+              <h2 id="rankingChartTitle">Top series in 2020</h2>
+            </div>
+            <span class="chart-unit">Estimated copies</span>
+          </div>
+          <div class="chart-wrap chart-wrap-ranking"><canvas id="rankingChart" role="img" aria-label="Horizontal bar chart comparing the selected manga rankings"></canvas></div>
+          <p id="rankingSummary" class="chart-summary"></p>
+        </article>
+
+        <article class="chart-card">
+          <div class="card-heading">
+            <div>
+              <p class="panel-kicker">Displayed group</p>
+              <h2 id="shareChartTitle">Share of the top 5</h2>
+            </div>
+          </div>
+          <div class="chart-wrap chart-wrap-share"><canvas id="shareChart" role="img" aria-label="Doughnut chart showing each title's share of displayed estimated sales"></canvas></div>
+          <p class="chart-summary">This composition uses only the selected ranked titles. It does not represent total manga market share.</p>
+        </article>
+
+        <article class="chart-card insight-card">
+          <p class="panel-kicker">What stands out</p>
+          <h2 id="insightTitle">A clear leader</h2>
+          <p id="insightBody">Choose a ranking type and year to compare the leader with the rest of the field.</p>
+          <div class="insight-rule" aria-hidden="true"></div>
+          <p class="insight-definition"><strong>Series</strong> combines sales across a title's volumes. <strong>Individual volumes</strong> ranks specific collected editions.</p>
+        </article>
+      </section>
+
+      <section class="table-card" aria-labelledby="records-title">
+        <div class="card-heading records-heading">
+          <div>
+            <p class="panel-kicker">Supporting records</p>
+            <h2 id="records-title">Selected rankings</h2>
+          </div>
+          <label class="search-field" for="titleSearch"><span class="sr-only">Search selected titles</span><i class="fa fa-search" aria-hidden="true"></i><input id="titleSearch" type="search" placeholder="Search titles"></label>
+        </div>
+        <div class="table-responsive">
+          <table class="table dashboard-table">
+            <caption id="tableCaption">Series rankings for 2020</caption>
+            <thead>
+              <tr>
+                <th scope="col"><button class="sort-button" type="button" data-sort="rank">Rank <span aria-hidden="true">↕</span></button></th>
+                <th scope="col"><button class="sort-button" type="button" data-sort="title">Title <span aria-hidden="true">↕</span></button></th>
+                <th scope="col" class="numeric"><button class="sort-button" type="button" data-sort="estimatedCopiesSold">Estimated copies sold <span aria-hidden="true">↕</span></button></th>
+              </tr>
+            </thead>
+            <tbody id="rankingTableBody"></tbody>
+          </table>
+        </div>
+        <p id="emptyState" class="empty-state" hidden>No titles match that search.</p>
+      </section>
+
+      <aside class="source-note" aria-labelledby="source-title">
+        <div>
+          <p class="panel-kicker">How to read this</p>
+          <h2 id="source-title">Scope and source</h2>
+        </div>
+        <p>Figures are estimated Japanese manga sales drawn from the Oricon annual rankings already presented on this site. Coverage varies: most year/type combinations include ten titles, while 2020 includes five series and nine volumes. Shares and gaps are calculated only from the records displayed here.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="dashboard-footer">
+    <div class="container"><span>Built from the site's 2010–2020 ranking archive.</span><a href="index.html">Return to The Evolution of Manga</a></div>
+  </footer>
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/chart.min.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
