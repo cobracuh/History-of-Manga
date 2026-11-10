@@ -6,7 +6,8 @@ This folder is ready to publish as a static GitHub Pages site.
 
 - `index.html` contains the page content and accessible structure.
 - `dashboard.html` contains the interactive sales dashboard.
-- `assets/css/untitled.css` contains the responsive design and visual fixes.
+- `assets/css/base.css` contains shared design tokens, typography, accessibility, and navigation.
+- `assets/css/landing.css` contains the landing page, narrative sections, charts, rankings, and footer styling.
 - `assets/css/dashboard.css` contains the dashboard-specific responsive layout.
 - `assets/js/site.js` contains the volume chart data, chart rendering, responsive redraw behavior, and ranking filters.
 - `assets/js/dashboard.js` powers the dashboard filters, charts, search, sorting, and CSV download.
