@@ -1,6 +1,5 @@
-# The Evolution of Manga — repaired version
+# The Evolution of Manga
 
-This folder is ready to publish as a static GitHub Pages site.
 
 ## Main files
 
