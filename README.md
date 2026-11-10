@@ -18,4 +18,5 @@ This folder is ready to publish as a static GitHub Pages site.
 - The rankings open to the 2020 “By series” view and remain filterable.
 - The volume visualization now draws only the five records belonging to the selected year.
 - The dashboard makes the shorter 2020 coverage explicit and calculates shares only from the displayed records.
+- The landing page uses a portrait-led editorial layout, floating navigation, and a unified responsive visual system.
 - Keep the Oricon source link and replace or credit any artwork whose usage rights are not already documented.
