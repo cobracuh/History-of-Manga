@@ -668,7 +668,38 @@ select {
   }
 
   #about .timeline-panel {
-    padding: 1rem !important;
+    float: none;
+    width: calc(100% - 1.75rem);
+    min-height: 9rem;
+    margin-left: 1.75rem;
+    padding: 1.25rem 1.25rem 1.25rem 4.75rem !important;
+    text-align: left;
+  }
+
+  #about .timeline > li,
+  #about .timeline > li.timeline-inverted {
+    min-height: 9rem;
+    margin-bottom: 2.25rem;
+  }
+
+  #about .timeline > li .timeline-image {
+    top: 1.25rem;
+    width: 5rem;
+    height: 5rem;
+  }
+
+  #about .timeline::before {
+    left: 2.5rem;
+  }
+
+  #about .timeline-heading h4 {
+    margin-bottom: 0.15rem;
+    font-size: 2rem !important;
+  }
+
+  #about .timeline-heading .subheading {
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
   }
 
   #portfolio {
@@ -678,6 +709,10 @@ select {
 
   #about .timeline-body p {
     font-size: 0.95rem !important;
+  }
+
+  #about .timeline-body {
+    margin-left: -3.5rem;
   }
 
   .chart-controls {
@@ -717,4 +752,3 @@ select {
     transform: none !important;
   }
 }
-
